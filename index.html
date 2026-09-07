@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wedding celebration of Neel & Hema — Join us for our special day." />
+  <title>Neel &amp; Hema | Wedding</title>
+
+  <!-- Google Fonts: Cormorant Garamond (headings) + Lato (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome for clock & calendar icons used in the timeline cards -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+
+<body>
+
+  <!-- =============================================
+       NAVIGATION
+  ============================================== -->
+  <header id="site-header" role="banner">
+    <nav id="main-nav" aria-label="Main navigation">
+
+      <!-- LEFT: Muhurat mini-countdown -->
+      <div class="nav-left">
+        <p class="nav-muhurat-label">Auspicious Muhurat</p>
+        <div class="nav-countdown" id="nav-countdown" aria-live="polite">
+          <div class="nav-cd-unit">
+            <span class="nav-cd-num" id="nav-cd-days">--</span>
+            <span class="nav-cd-lbl">Days</span>
+          </div>
+          <span class="nav-cd-colon">:</span>
+          <div class="nav-cd-unit">
+            <span class="nav-cd-num" id="nav-cd-hrs">--</span>
+            <span class="nav-cd-lbl">Hrs</span>
+          </div>
+          <span class="nav-cd-colon">:</span>
+          <div class="nav-cd-unit">
+            <span class="nav-cd-num" id="nav-cd-mins">--</span>
+            <span class="nav-cd-lbl">Min</span>
+          </div>
+          <span class="nav-cd-colon">:</span>
+          <div class="nav-cd-unit">
+            <span class="nav-cd-num" id="nav-cd-secs">--</span>
+            <span class="nav-cd-lbl">Sec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER: Monogram logo -->
+      <a href="#hero-section" class="nav-logo" aria-label="Back to top">
+        <span class="nav-logo-star">★</span>
+        <span class="nav-logo-names">N <span class="nav-logo-amp">&amp;</span> H</span>
+        <span class="nav-logo-location">Mumbai</span>
+      </a>
+
+      <!-- Hamburger toggle (mobile) -->
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <!-- RIGHT: Nav links + RSVP -->
+      <div class="nav-right">
+        <ul id="nav-links" class="nav-links" role="list">
+          <li><a href="#story-section"    class="nav-link">Our Story</a></li>
+          <li><a href="#events-section"   class="nav-link">Events</a></li>
+          <li><a href="#gallery-section"  class="nav-link">Gallery</a></li>
+          <li><a href="#families-section" class="nav-link">Families</a></li>
+          <li><a href="#venue-section"    class="nav-link">Venue</a></li>
+        </ul>
+        <a href="#venue-section" class="nav-rsvp-btn">RSVP</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =============================================
+         HERO SECTION
+    ============================================== -->
+    <section id="hero-section" aria-labelledby="hero-names">
+
+      <!-- Video background (muted, looping, autoplays) -->
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      >
+        <!--
+          Drop your video file into assets/images/ and update the src below.
+          Recommended: MP4 H.264, ~10–30 seconds, 1920×1080.
+          Example: <source src="assets/images/hero-bg.mp4" type="video/mp4" />
+        -->
+        <source src="./assets/videos/invitation.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Dark overlay on top of video -->
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <!-- ── Main content (over video) ── -->
+      <div class="hero-content">
+
+        <!-- Eyebrow pill -->
+        <p class="hero-eyebrow">
+          <span class="hero-eyebrow-star">★</span>
+          Royal Destination Nuptials &nbsp;·&nbsp; Mumbai
+          <span class="hero-eyebrow-star">★</span>
+        </p>
+
+        <!-- Blessing line -->
+        <p class="hero-blessing">"Om Shree Ganeshaya Namah"</p>
+
+        <!-- Main title -->
+        <h1 id="hero-names" class="hero-names">
+          The Wedding of
+          <em class="hero-names-couple">Neel &amp; Hema</em>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-subtitle">
+          Shubh Vivaha Mahotsav &nbsp;·&nbsp; Celebrating sacred vows with family &amp; friends
+        </p>
+
+        <!-- Meta row: date · venue · location -->
+        <div class="hero-meta" aria-label="Wedding details">
+          <span class="hero-meta-item">
+            <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
+            November 15–16, 2025
+          </span>
+          <span class="hero-meta-dot" aria-hidden="true">◆</span>
+          <span class="hero-meta-item">
+            <i class="fa-regular fa-building" aria-hidden="true"></i>
+            Seasons 24 Banquets, Wagholi
+          </span>
+          <span class="hero-meta-dot" aria-hidden="true">◆</span>
+          <span class="hero-meta-item">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            Pune, Maharashtra
+          </span>
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="hero-ctas">
+          <a href="#events-section" class="hero-btn hero-btn-dark">
+            <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
+            Explore Itinerary
+          </a>
+          <a href="#venue-section" class="hero-btn hero-btn-gold">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            Venue Guide
+          </a>
+        </div>
+
+      </div><!-- /.hero-content -->
+
+      <!-- ── Bottom countdown bar (static dark, no video behind) ── -->
+      <div class="hero-countdown-bar" aria-label="Auspicious Muhurat Countdown">
+        <div class="hero-countdown-bar-inner">
+
+          <div class="hcb-left">
+            <p class="hcb-title">Auspicious Muhurat Countdown</p>
+            <p class="hcb-subtitle">Sacred Hastamelap Ceremony</p>
+          </div>
+
+          <div class="hcb-timer" id="hero-countdown" aria-live="polite">
+            <div class="hcb-unit">
+              <span class="hcb-num" id="cd-days">--</span>
+              <span class="hcb-lbl">Days</span>
+            </div>
+            <span class="hcb-sep" aria-hidden="true"></span>
+            <div class="hcb-unit">
+              <span class="hcb-num" id="cd-hours">--</span>
+              <span class="hcb-lbl">Hours</span>
+            </div>
+            <span class="hcb-sep" aria-hidden="true"></span>
+            <div class="hcb-unit">
+              <span class="hcb-num" id="cd-mins">--</span>
+              <span class="hcb-lbl">Minutes</span>
+            </div>
+            <span class="hcb-sep" aria-hidden="true"></span>
+            <div class="hcb-unit">
+              <span class="hcb-num" id="cd-secs">--</span>
+              <span class="hcb-lbl">Seconds</span>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /.hero-countdown-bar -->
+
+    </section>
+
+    <!-- =============================================
+         OUR STORY SECTION
+    ============================================== -->
+    <!-- <section id="story-section" aria-labelledby="story-heading">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-label">How It All Began</span>
+          <h2 id="story-heading" class="section-title">Our Story</h2>
+          <div class="section-divider" aria-hidden="true">❧</div>
+        </div>
+
+        <ol class="story-timeline" aria-label="Our story timeline">
+
+          <li class="story-card" data-year="2019">
+            <div class="story-card-icon" aria-hidden="true">☕</div>
+            <div class="story-card-body">
+              <span class="story-card-year">2019</span>
+              <h3 class="story-card-title">First Meeting</h3>
+              <p class="story-card-text">
+                Neel and Hema first crossed paths at a mutual friend's birthday dinner in Mumbai.
+                What started as a lively debate about the best monsoon chai spots turned into an
+                hours-long conversation neither of them wanted to end.
+              </p>
+            </div>
+          </li>
+
+          <li class="story-card" data-year="2020">
+            <div class="story-card-icon" aria-hidden="true">🌅</div>
+            <div class="story-card-body">
+              <span class="story-card-year">2020</span>
+              <h3 class="story-card-title">Falling in Love</h3>
+              <p class="story-card-text">
+                Through the quiet of the pandemic, late-night calls and shared playlists
+                brought them closer. They discovered a shared love of old Bollywood music,
+                weekend hikes, and terrible cooking experiments.
+              </p>
+            </div>
+          </li>
+
+          <li class="story-card" data-year="2022">
+            <div class="story-card-icon" aria-hidden="true">💍</div>
+            <div class="story-card-body">
+              <span class="story-card-year">2022</span>
+              <h3 class="story-card-title">The Proposal</h3>
+              <p class="story-card-text">
+                On a misty morning at Lonavala, with the valley spread out below them,
+                Neel got down on one knee. Hema said yes before he could finish the sentence.
+                Their families celebrated together that very evening.
+              </p>
+            </div>
+          </li>
+
+          <li class="story-card" data-year="2025">
+            <div class="story-card-icon" aria-hidden="true">🎊</div>
+            <div class="story-card-body">
+              <span class="story-card-year">2025</span>
+              <h3 class="story-card-title">The Big Day</h3>
+              <p class="story-card-text">
+                And now, surrounded by everyone they love, they say "I do."
+                We're so glad you're part of this moment — welcome to the wedding of
+                Neel &amp; Hema!
+              </p>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section> -->
+
+    <!-- =============================================
+         COUNTDOWN BANNER
+    ============================================== -->
+    <section id="countdown-banner" aria-label="Wedding countdown">
+      <div class="countdown-banner-inner">
+
+        <!-- Left: timer -->
+        <div class="countdown-banner-left">
+          <p class="countdown-banner-label">Days Until We Say I Do</p>
+          <div class="countdown-banner-timer" id="banner-timer">
+            <div class="cbt-unit">
+              <span class="cbt-number" id="cbt-days">--</span>
+              <span class="cbt-label">Days</span>
+            </div>
+            <span class="cbt-colon">:</span>
+            <div class="cbt-unit">
+              <span class="cbt-number" id="cbt-hours">--</span>
+              <span class="cbt-label">Hours</span>
+            </div>
+            <span class="cbt-colon">:</span>
+            <div class="cbt-unit">
+              <span class="cbt-number" id="cbt-mins">--</span>
+              <span class="cbt-label">Minutes</span>
+            </div>
+            <span class="cbt-colon">:</span>
+            <div class="cbt-unit">
+              <span class="cbt-number" id="cbt-secs">--</span>
+              <span class="cbt-label">Seconds</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="countdown-banner-divider" aria-hidden="true"></div>
+
+        <!-- Right: quote -->
+        <div class="countdown-banner-right">
+          <blockquote class="countdown-quote">
+            "A successful marriage requires falling in love many times,
+            always with the same person."
+          </blockquote>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         EVENTS / SCHEDULE SECTION
+    ============================================== -->
+  <section class="timeline-section" aria-labelledby="timeline-heading">
+
+    <!-- ══════════════════════════════════════
+         SECTION HEADER
+    ══════════════════════════════════════ -->
+    <div class="timeline-header">
+      <p class="timeline-eyebrow">
+        <span class="eyebrow-star">✦</span>
+        Shubh Vivaha Utsav &nbsp;·&nbsp; Neel &amp; Hema
+        <span class="eyebrow-star">✦</span>
+      </p>
+      <h2 class="timeline-title" id="timeline-heading">Celebration Itinerary &amp; Events</h2>
+      <p class="timeline-subtitle">
+        A timeless journey through sacred Vedic traditions, joyful music, and grand
+        celebrations across Mumbai's grand venues on November 15–16, 2025.
+      </p>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         TAB BAR
+    ══════════════════════════════════════ -->
+    <div class="timeline-tabs" role="tablist" aria-label="Wedding day filter">
+
+      <button
+        class="tab-btn tab-btn-all active"
+        role="tab"
+        aria-selected="true"
+        data-tab="all"
+        aria-controls="day-1-panel day-2-panel"
+      >All Celebrations <span class="tab-count">6</span></button>
+
+      <button
+        class="tab-btn"
+        role="tab"
+        aria-selected="false"
+        data-tab="day1"
+        aria-controls="day-1-panel"
+      >
+        Day 1: AVC &nbsp;
+        <span class="tab-date">Nov 15</span>
+      </button>
+
+      <button
+        class="tab-btn"
+        role="tab"
+        aria-selected="false"
+        data-tab="day2"
+        aria-controls="day-2-panel"
+      >
+        Day 2: Vivaha &nbsp;
+        <span class="tab-date">Nov 16</span>
+      </button>
+
+    </div>
+
+    <!-- ══════════════════════════════════════
+         DAY 1 — AVC (Aashirwad & Vidhi Ceremony)
+    ══════════════════════════════════════ -->
+    <div class="day-group" id="day-1-panel" data-day="day1" role="tabpanel">
+      <div class="day-label">
+        <div class="day-badge">
+          <span class="day-number">Day 1</span>
+          <span class="day-separator">·</span>
+          <span class="day-name">AVC</span>
+        </div>
+        <div class="day-date">
+          <i class="fa-regular fa-calendar-days"></i>
+          Saturday, November 15th, 2025
+        </div>
+      </div>
+
+      <div class="timeline-grid">
+
+         <!-- Card: Pan laguan -->
+        <div class="event-card">
+          <div class="image-container">
+            <img src="assets/images/Faal Daan.png" alt="Tikka faal daan" class="event-image">
+          </div>
+          <div class="card-content">
+            <h3 class="event-title">Tikka faal daan</h3>
+            <div class="event-time">
+              <i class="fa-regular fa-clock icon-clock"></i>
+              <span>11:00 AM</span>
+            </div>
+            <p class="event-description">Intricate henna designs for the bride and family</p>
+          </div>
+        </div>
+
+        <!-- Card: Ring Cermoney-->
+        <div class="event-card">
+          <div class="image-container">
+            <img src="assets/images/ring arrangement.jpg" alt="Tikka faal daan" class="event-image">
+          </div>
+          <div class="card-content">
+            <h3 class="event-title">Ring Ceremony</h3>
+            <div class="event-time">
+              <i class="fa-regular fa-clock icon-clock"></i>
+              <span>11:00 AM</span>
+            </div>
+            <p class="event-description">Intricate henna designs for the bride and family</p>
+          </div>
+        </div>
+
+        <!-- Card: Haldi -->
+        <div class="event-card">
+          <div class="image-container">
+            <img src="assets/images/haldii.png" alt="Haldi" class="event-image">
+          </div>
+          <div class="card-content">
+            <h3 class="event-title">Haldi</h3>
+            <div class="event-time">
+              <i class="fa-regular fa-clock icon-clock"></i>
+              <span>11:00 AM</span>
+            </div>
+            <p class="event-description">Intricate henna designs for the bride and family</p>
+          </div>
+        </div>
+
+        <!-- Card: Sangeet -->
+        <div class="event-card">
+          <div class="image-container">
+            <img src="assets/images/sangeet.jpg" alt="Sangeet night" class="event-image">
+          </div>
+          <div class="card-content">
+            <h3 class="event-title">Sangeet</h3>
+            <div class="event-time">
+              <i class="fa-regular fa-clock icon-clock"></i>
+              <span>7:00 PM</span>
+            </div>
+            <p class="event-description">Music, dance, and celebration with both families</p>
+          </div>
+        </div>
+      </div><!-- /.timeline-grid day1 -->
+    </div><!-- /.day-group day1 -->
+
+    <!-- ══════════════════════════════════════
+         DAY 2 — VIVAHA (Wedding Ceremony)
+    ══════════════════════════════════════ -->
+    <div class="day-group" id="day-2-panel" data-day="day2" role="tabpanel">
+      <div class="day-label">
+        <div class="day-badge">
+          <span class="day-number">Day 2</span>
+          <span class="day-separator">·</span>
+          <span class="day-name">Vivaha</span>
+        </div>
+        <div class="day-date">
+          <i class="fa-regular fa-calendar-days"></i>
+          Sunday, November 16th, 2025
+        </div>
+      </div>
+
+      <div class="timeline-grid">
+
+        <!-- Card: Vidhan -->
+        <div class="event-card">
+          <div class="image-container">
+            <img src="./assets/images/vidhan.png" alt="Vidhan" class="event-image">
+          </div>
+          <div class="card-content">
+            <h3 class="event-title">Vidhan</h3>
+            <div class="event-time">
+              <i class="fa-regular fa-clock icon-clock"></i>
+              <span>9:30 AM</span>
+            </div>
+            <p class="event-description">The groom arrives with his family and friends</p>
+          </div>
+        </div>
+        <!-- Card: Baarat -->
+        <div class="event-card">
+          <div class="image-container">
+            <img src="./assets/images/baraat.png" alt="Baarat procession" class="event-image">
+          </div>
+          <div class="card-content">
+            <h3 class="event-title">Baarat</h3>
+            <div class="event-time">
+              <i class="fa-regular fa-clock icon-clock"></i>
+              <span>9:30 AM</span>
+            </div>
+            <p class="event-description">The groom arrives with his family and friends</p>
+          </div>
+        </div>
+        <!-- Card: Varmala & Reception -->
+        <div class="event-card">
+          <div class="image-container">
+            <img src="./assets/images/varmala.png" alt="Varmala & Reception" class="event-image">
+          </div>
+          <div class="card-content">
+            <h3 class="event-title">Varmala & Reception</h3>
+            <div class="event-time">
+              <i class="fa-regular fa-clock icon-clock"></i>
+              <span>9:30 AM</span>
+            </div>
+            <p class="event-description">The groom arrives with his family and friends</p>
+          </div>
+        </div>
+
+        <!-- Card: Hast Melap -->
+        <div class="event-card">
+          <div class="image-container">
+            <img src="assets/images/saathphere.png" alt="Hast Melap ceremony" class="event-image">
+          </div>
+          <div class="card-content">
+            <h3 class="event-title">Hast Melap</h3>
+            <div class="event-time">
+              <i class="fa-regular fa-clock icon-clock"></i>
+              <span>12:45 PM</span>
+            </div>
+            <p class="event-description">Sacred ceremony of joining hands</p>
+          </div>
+        </div>
+      </div><!-- /.timeline-grid day2 -->
+    </div><!-- /.day-group day2 -->
+
+  </section>
+    <!-- =============================================
+         GALLERY SECTION
+    ============================================== -->
+    <!-- <section id="gallery-section" aria-labelledby="gallery-heading">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-label">Memories</span>
+          <h2 id="gallery-heading" class="section-title">Our Gallery</h2>
+          <div class="section-divider" aria-hidden="true">❧</div>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid" role="list" aria-label="Photo gallery">
+
+          <button class="gallery-item" role="listitem" data-index="0"
+            aria-label="Open photo 1: First date in Bandra">
+            <div class="gallery-placeholder gp-1" aria-hidden="true"></div>
+            <span class="gallery-caption">First Date · Bandra</span>
+          </button>
+
+          <button class="gallery-item" role="listitem" data-index="1"
+            aria-label="Open photo 2: Lonavala trip">
+            <div class="gallery-placeholder gp-2" aria-hidden="true"></div>
+            <span class="gallery-caption">Lonavala Trip</span>
+          </button>
+
+          <button class="gallery-item" role="listitem" data-index="2"
+            aria-label="Open photo 3: The proposal">
+            <div class="gallery-placeholder gp-3" aria-hidden="true"></div>
+            <span class="gallery-caption">The Proposal 💍</span>
+          </button>
+
+          <button class="gallery-item" role="listitem" data-index="3"
+            aria-label="Open photo 4: Family gathering">
+            <div class="gallery-placeholder gp-4" aria-hidden="true"></div>
+            <span class="gallery-caption">Family Celebration</span>
+          </button>
+
+          <button class="gallery-item" role="listitem" data-index="4"
+            aria-label="Open photo 5: Pre-wedding shoot">
+            <div class="gallery-placeholder gp-5" aria-hidden="true"></div>
+            <span class="gallery-caption">Pre-Wedding Shoot</span>
+          </button>
+
+          <button class="gallery-item" role="listitem" data-index="5"
+            aria-label="Open photo 6: Together forever">
+            <div class="gallery-placeholder gp-6" aria-hidden="true"></div>
+            <span class="gallery-caption">Together Forever</span>
+          </button>
+
+        </div>
+
+        <p class="gallery-hint">Click any photo to view it larger.</p>
+      </div>
+
+      <div
+        id="gallery-lightbox"
+        class="gallery-lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Photo lightbox"
+        aria-hidden="true"
+      >
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous photo">&#8249;</button>
+        <div class="lightbox-content" id="lightbox-content">
+        </div>
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next photo">&#8250;</button>
+      </div>
+    </section> -->
+
+  <!-- =============================================
+       OUR FAMILIES SECTION
+  ============================================== -->
+  <section id="families-section" aria-labelledby="families-heading">
+    <div class="families-wrap">
+
+      <!-- ── Section Header ── -->
+      <div class="families-header">
+        <span class="families-eyebrow">
+          <span class="fam-eye-star">★</span> Two Families United in Love <span class="fam-eye-star">★</span>
+        </span>
+        <h2 id="families-heading" class="families-title">Our Families</h2>
+        <div class="families-ornament" aria-hidden="true">❖ ✦ ❖</div>
+        <p class="families-quote">
+          "With the grace of the Almighty and the heartfelt blessings of our beloved elders, we invite
+          you to share our joy and celebrate the coming together of two generations."
+        </p>
+      </div>
+
+      <!-- ── Two-column layout ── -->
+      <div class="families-columns">
+
+        <!-- ════════════════════════════
+             GROOM'S SIDE
+        ════════════════════════════ -->
+        <div class="fam-col">
+          <div class="fam-side-label">Groom's Side</div>
+          <h3 class="fam-family-name">The Kanani Family</h3>
+          <p class="fam-hometown">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            Ancestral Hometown: <strong>Rajkot &amp; Jamnagar, Gujarat</strong>
+            &nbsp;·&nbsp; Current: <strong>Pune / Mumbai</strong>
+          </p>
+
+          <!-- Parents card -->
+          <div class="fam-card">
+            <div class="fam-card-photo-wrap">
+              <div class="fam-photo-placeholder" aria-label="Photo of Groom's parents">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+              </div>
+              <span class="fam-photo-badge">Parents</span>
+            </div>
+            <div class="fam-card-body">
+              <span class="fam-card-eyebrow">Groom's Revered Parents</span>
+              <h4 class="fam-card-name">Mrs. Neeta &amp; Mr. Deepan V. Kanani</h4>
+              <ul class="fam-card-details">
+                <li><strong>Mr. Deepan:</strong> Managing Director, Kanani Industrial Tools &amp; Exports</li>
+                <li><strong>Mrs. Neeta:</strong> Educational Trustee &amp; Philanthropist (Shruti Foundation)</li>
+              </ul>
+              <span class="fam-card-tag">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Family Estate: Prabhat Road, Pune
+              </span>
+            </div>
+          </div>
+
+          <!-- Ancestral lineage -->
+          <div class="fam-section-label">Ancestral Lineage &amp; Heritage</div>
+          <div class="fam-lineage-grid">
+            <div class="fam-lineage-card">
+              <span class="fam-lineage-type">Paternal (Dada – Dadi)</span>
+              <p class="fam-lineage-name">Late Shree Vinodrai Maganlal Kanani</p>
+              <p class="fam-lineage-spouse">Late Smt. Jyostna V. Kanani</p>
+              <p class="fam-lineage-origin">Origin: Jamnagar, Gujarat</p>
+            </div>
+            <div class="fam-lineage-card">
+              <span class="fam-lineage-type">Maternal (Nana – Nani)</span>
+              <p class="fam-lineage-name">Shree Rameshchandra P. Mehta</p>
+              <p class="fam-lineage-spouse">Smt. Kokilaben R. Mehta</p>
+              <p class="fam-lineage-origin">Hometown: Bhavnagar, Gujarat</p>
+            </div>
+          </div>
+
+          <!-- Brother & Sister-in-law -->
+          <div class="fam-section-label">Brother &amp; Sister-in-Law</div>
+          <div class="fam-sibling-card">
+            <div class="fam-photo-placeholder fam-photo-sm" aria-label="Photo of Deel D. Kanani">
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="fam-sibling-body">
+              <div class="fam-sibling-name-row">
+                <h4 class="fam-sibling-name">Mr. Deel D. Kanani</h4>
+                <span class="fam-sibling-badge">Groom's Brother</span>
+              </div>
+              <p class="fam-sibling-detail"><strong>Profession:</strong> Investment Banker &amp; VP, Standard Chartered Bank</p>
+              <p class="fam-sibling-detail"><strong>Residence:</strong> Mumbai &amp; Pune</p>
+              <p class="fam-sibling-note">Eagerly awaiting to welcome his sister-in-law into the Kanani family</p>
+            </div>
+          </div>
+
+        </div><!-- /.fam-col groom -->
+
+        <!-- ════════════════════════════
+             BRIDE'S SIDE
+        ════════════════════════════ -->
+        <div class="fam-col">
+          <div class="fam-side-label bride-side">Bride's Side</div>
+          <h3 class="fam-family-name">The Pandey Family</h3>
+          <p class="fam-hometown">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            Ancestral Hometown: <strong>Varanasi &amp; Lucknow, U.P.</strong>
+            &nbsp;·&nbsp; Current: <strong>Kalyani Nagar, Pune</strong>
+          </p>
+
+          <!-- Parents card -->
+          <div class="fam-card">
+            <div class="fam-card-photo-wrap">
+              <div class="fam-photo-placeholder" aria-label="Photo of Bride's parents">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+              </div>
+              <span class="fam-photo-badge">Parents</span>
+            </div>
+            <div class="fam-card-body">
+              <span class="fam-card-eyebrow">Bride's Revered Parents</span>
+              <h4 class="fam-card-name">Mrs. Arti Ben &amp; Mr. Rajesh Bhai Pandey</h4>
+              <ul class="fam-card-details">
+                <li><strong>Mr. Rajesh Bhai:</strong> Chief Civil Engineer &amp; Infrastructure Consultant (Retd.)</li>
+                <li><strong>Mrs. Arti Ben:</strong> Senior Educationist &amp; Classical Sangeet Acharya</li>
+              </ul>
+              <span class="fam-card-tag">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Family Residence: Kalyani Nagar, Pune
+              </span>
+            </div>
+          </div>
+
+          <!-- Ancestral lineage -->
+          <div class="fam-section-label">Ancestral Lineage &amp; Heritage</div>
+          <div class="fam-lineage-grid">
+            <div class="fam-lineage-card">
+              <span class="fam-lineage-type">Paternal (Dada – Dadi)</span>
+              <p class="fam-lineage-name">Late Pt. Suryanarayan Pandey</p>
+              <p class="fam-lineage-spouse">Late Smt. Vidya Devi Pandey</p>
+              <p class="fam-lineage-origin">Ancestral Roots: Varanasi, Uttar Pradesh</p>
+            </div>
+            <div class="fam-lineage-card">
+              <span class="fam-lineage-type">Maternal (Nana – Nani)</span>
+              <p class="fam-lineage-name">Late Shree Harishanker Shukla</p>
+              <p class="fam-lineage-spouse">Smt. Kamleshwari Shukla</p>
+              <p class="fam-lineage-origin">Hometown: Prayagraj / Allahabad, U.P.</p>
+            </div>
+          </div>
+
+          <!-- Sister & Brother-in-law -->
+          <div class="fam-section-label">Sister &amp; Brother-in-Law</div>
+          <div class="fam-sibling-card">
+            <div class="fam-photo-placeholder fam-photo-sm" aria-label="Photo of Mrs. Ananya Sharma and Dr. Aditya Sharma">
+              <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+            </div>
+            <div class="fam-sibling-body">
+              <div class="fam-sibling-name-row">
+                <h4 class="fam-sibling-name">Mrs. Ananya (Pandey) Sharma &amp; Dr. Aditya Sharma</h4>
+                <span class="fam-sibling-badge bride-badge">Sister &amp; Husband</span>
+              </div>
+              <p class="fam-sibling-detail"><strong>Professions:</strong> Senior UI/UX Architect (Adobe) &amp; Associate Cardiologist (KEM Hospital)</p>
+              <p class="fam-sibling-detail"><strong>Current City:</strong> Bengaluru &amp; Pune</p>
+              <p class="fam-sibling-note">
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                Married with blessings · Residing happily in Bangalore
+              </p>
+            </div>
+          </div>
+
+        </div><!-- /.fam-col bride -->
+
+      </div><!-- /.families-columns -->
+    </div><!-- /.families-wrap -->
+  </section>
+
+  <!-- =============================================
+       VENUE SECTION
+  ============================================== -->
+  <section id="venue-section" aria-labelledby="venue-heading">
+    <div class="venue-outer">
+
+      <!-- ── Section Header ── -->
+      <div class="venue-header">
+        <p class="venue-eyebrow">
+          <span class="venue-eyebrow-line"></span>
+          Sacred Destination &nbsp;·&nbsp; Find Us Here
+          <span class="venue-eyebrow-line"></span>
+        </p>
+        <h2 id="venue-heading" class="venue-title">The Venue &amp; Location Guide</h2>
+        <span class="venue-star-divider" aria-hidden="true">✦</span>
+        <p class="venue-desc">
+          We eagerly await your gracious presence. Everything you need to navigate
+          seamlessly to our wedding celebration at Wagholi, Pune.
+        </p>
+      </div>
+
+      <!-- ── Two-column card ── -->
+      <div class="venue-card">
+
+        <!-- LEFT: Info panel -->
+        <div class="venue-info">
+
+          <span class="venue-official-badge">
+            <span class="venue-badge-dot" aria-hidden="true">●</span>
+            Official Wedding Banquet
+          </span>
+
+          <h3 class="venue-name">Seasons 24 Banquets</h3>
+          <p class="venue-subtitle-tag">Grand Royal Ballroom Suite</p>
+
+          <!-- Detail rows -->
+          <ul class="venue-details-list">
+            <li class="venue-detail-item">
+              <span class="venue-detail-icon" aria-hidden="true">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+              <div>
+                <strong>Location &amp; Floor</strong>
+                <p>Hall No: 3, 4th Floor, Nagar Road, Wagholi, Pune,<br>Maharashtra – 412207</p>
+                <span class="venue-landmark">Landmark: Next to Dhaval Shivtirth &amp; Skylights Apartment</span>
+              </div>
+            </li>
+            <li class="venue-detail-item">
+              <span class="venue-detail-icon" aria-hidden="true">
+                <i class="fa-regular fa-clock"></i>
+              </span>
+              <div>
+                <strong>Ceremony Schedule</strong>
+                <p>Baraat Reception &amp; Foyer Drinks: <strong class="venue-time">04:30 PM</strong></p>
+                <p>Auspicious Varmala &amp; Muhurat: <strong class="venue-time">06:15 PM onwards</strong></p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Amenities grid -->
+          <ul class="venue-amenities">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Valet Parking Desk</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Dedicated Direct Elevators</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Fully Air Conditioned</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> 4th Floor Welcome Foyer</li>
+          </ul>
+
+          <!-- Action buttons -->
+          <div class="venue-actions">
+            <a
+              href="https://maps.google.com/?q=Seasons+24+Banquets+Wagholi+Pune"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="venue-btn venue-btn-dark"
+              aria-label="Open Seasons 24 Banquets in Google Maps"
+            >
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              Open in Google Maps
+              <i class="fa-solid fa-arrow-up-right-from-square venue-btn-ext" aria-hidden="true"></i>
+            </a>
+            <button
+              class="venue-btn venue-btn-outline"
+              id="copy-address-btn"
+              aria-label="Copy full address to clipboard"
+            >
+              <i class="fa-regular fa-copy" aria-hidden="true"></i>
+              Copy Full Address
+            </button>
+          </div>
+
+        </div><!-- /.venue-info -->
+
+        <!-- RIGHT: Map panel -->
+        <div class="venue-map">
+          <!-- GPS indicator bar -->
+          <div class="venue-map-bar">
+            <span class="venue-map-gps-dot" aria-hidden="true"></span>
+            <span class="venue-map-gps-label">Direct GPS Pinpoint</span>
+            <a
+              href="https://maps.google.com/?q=Seasons+24+Banquets+Wagholi+Pune"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="venue-map-fullscreen"
+              aria-label="View fullscreen map"
+            >View Fullscreen ⛶</a>
+          </div>
+          <iframe
+            title="Seasons 24 Banquets location on Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.1452657924456!2d73.97564687596763!3d18.589510268618703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1234f4d1e0d%3A0xb6e3e07c6f92a1c5!2sSeasons%2024%20Banquets!5e0!3m2!1sen!2sin!4v1720000000000!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div><!-- /.venue-map -->
+
+      </div><!-- /.venue-card -->
+    </div><!-- /.venue-outer -->
+  </section>
+
+  <!-- =============================================
+       FOOTER
+  ============================================== -->
+  <footer id="site-footer" role="contentinfo">
+    <p class="footer-line">Kanani &amp; Pandey Nuptial Celebrations &nbsp;·&nbsp; 2025</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

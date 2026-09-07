@@ -1,0 +1,117 @@
+CHANGELOG — Neel & Hema Wedding Website
+========================================
+
+
+[2026-08-30] — Initial Build
+------------------------------
+
+PROJECT SETUP
+  - Created project folder structure: css/, js/, assets/images/, assets/icons/
+  - Main entry point: index.html
+  - Stylesheet: css/style.css
+  - Scripts: js/script.js
+  - Assets folder reserved for images, icons, and fonts
+
+NAVIGATION
+  - Fixed header with dark wine background (#1e0d0d) — always visible
+  - Three-column grid layout: Left (Muhurat countdown) · Center (N & H monogram logo) · Right (nav links + RSVP pill)
+  - "Auspicious Muhurat" mini live countdown in nav (Days / Hrs / Min / Sec boxes)
+  - Gold italic serif monogram with star ornament and "Mumbai" location tag
+  - Nav links: Our Story · Events · Gallery · Families · Venue
+  - Gold outline RSVP pill button (fills on hover)
+  - Hamburger menu for mobile with slide-down drawer
+  - Smooth scroll with fixed-header offset correction
+
+HERO SECTION
+  - Full-viewport section with looping background video support (drop hero-bg.mp4 to activate)
+  - Dark overlay gradient over video area only
+  - Gold eyebrow pill: "★ Royal Destination Nuptials · Mumbai ★"
+  - Sanskrit blessing line: "Om Shree Ganeshaya Namah"
+  - Large serif heading: "The Wedding of Neel & Hema" (italic gold couple names)
+  - Spaced uppercase subtitle
+  - Meta row: Date · Venue · Location (Font Awesome icons)
+  - Two CTA buttons: dark wine "Explore Itinerary" + gold "Venue Guide"
+  - Bottom countdown bar — fully solid dark (#140808), no video bleed
+    - "Auspicious Muhurat Countdown / Sacred Hastamelap Ceremony" label
+    - Large serif Days / Hours / Minutes / Seconds live timer
+  - All hero elements animate in with staggered fade-up on load
+
+COUNTDOWN BANNER (between Story and Events)
+  - Full-width dark section (#1a130a)
+  - Left: "Days Until We Say I Do" label + large DD:HH:MM:SS serif timer
+  - Right: italic wedding quote in warm gold
+  - Vertical gold divider between halves
+  - Mobile: stacks vertically
+
+OUR STORY SECTION
+  - Alternating left/right timeline with 4 milestone cards (2019 · 2020 · 2022 · 2025)
+  - Scroll-in animation via IntersectionObserver (fade-up on entry)
+  - Central vertical gold gradient line
+
+WEDDING EVENTS SECTION (Timeline)
+  - Section header: gold eyebrow · large title "Celebration Itinerary & Events" · subtitle
+  - Three-tab filter bar: "All Celebrations" · "Day 1: AVC Nov 15" · "Day 2: Vivaha Nov 16"
+  - Tabs toggle day panels via JS (active = dark wine fill; inactive = transparent purple)
+  - Day labels show only in "All Celebrations" view (hidden in single-day view)
+  - Day group headers: pill badge ("DAY 1 · AVC") + separate date pill below
+  - DAY 1 — AVC (Saturday Nov 15): Tikka Faal Daan · Ring Ceremony · Haldi · Sangeet · Dinner
+  - DAY 2 — Vivaha (Sunday Nov 16): Baarat · Hast Melap · Lunch + more
+  - Event cards: image top (210px) + title (purple) + time (gold clock icon) + description
+  - Cards centred in a flex row, fixed 300px width, hover lift effect
+
+OUR FAMILIES SECTION
+  - Two-column side-by-side layout (Groom's Side / Bride's Side)
+  - Section header: eyebrow pill · "Our Families" serif title · ornament · blessing quote
+  - Each column contains:
+    - Side label pill (gold / purple)
+    - Family name + ancestral hometown line
+    - Parents card: photo placeholder + eyebrow label + names + professions + location tag
+    - Ancestral Lineage & Heritage: 2-column grid with paternal/maternal grandparents
+    - Sibling card: photo placeholder + name + role badge + profession + italic note
+  - "Ancestral Lineage & Heritage" section labels: dark wine text + trailing gold gradient line
+  - Photo placeholders ready to swap with real images
+
+VENUE SECTION
+  - Section header: "— Sacred Destination · Find Us Here —" eyebrow · serif title · star · description
+  - Two-column card (420px info + map)
+  - Left info panel:
+    - "Official Wedding Banquet" gold badge
+    - Venue name: Seasons 24 Banquets
+    - "Grand Royal Ballroom Suite" subtitle
+    - Location & Floor detail row (Hall No: 3, 4th Floor, Nagar Road, Wagholi, Pune)
+    - Landmark note in gold
+    - Ceremony Schedule with bold times (04:30 PM / 06:15 PM)
+    - Amenities 2×2 grid: Valet Parking · Elevators · AC · Welcome Foyer
+    - "Open in Google Maps ↗" dark wine button
+    - "Copy Full Address" outline button (copies to clipboard via JS with green confirmation)
+  - Right map panel:
+    - GPS indicator bar (green dot · "Direct GPS Pinpoint" · "View Fullscreen")
+    - Google Maps iframe embed for Seasons 24 Banquets, Wagholi, Pune
+
+FOOTER
+  - Minimal single-line footer
+  - Warm off-white background with subtle top border
+  - Centred text: "KANANI & PANDEY NUPTIAL CELEBRATIONS · 2025"
+
+JAVASCRIPT MODULES (js/script.js)
+  - initStickyNav()       — scroll-based header shadow; hamburger mobile drawer
+  - initSmoothScroll()    — anchor links with fixed-header offset
+  - initScrollAnimations()— IntersectionObserver fade-in for story cards
+  - initCountdown()       — single interval drives hero bar + countdown banner + nav mini-timer
+  - initGallery()         — lightbox with keyboard nav (arrows + Escape), click-outside close
+  - initTimelineTabs()    — Day 1 / Day 2 / All tab switching with day-label visibility toggle
+  - initVenueCopyAddress()— clipboard copy with button feedback animation
+
+DESIGN TOKENS (CSS custom properties)
+  - Color palette: warm terracotta primary, gold accents, dark wine headings, cream backgrounds
+  - Font stack: Cormorant Garamond (headings) + Lato (body) via Google Fonts
+  - Spacing scale, border radius, shadow, transition variables
+  - Font Awesome 6 CDN for icons
+
+RESPONSIVE DESIGN
+  - Mobile-first media queries at 900px, 800px, 720px, 640px, 600px, 480px
+  - Hamburger nav on ≤900px
+  - Event cards stack on mobile
+  - Families columns stack on ≤800px
+  - Venue card stacks on ≤860px
+  - Hero meta row stacks on ≤640px
