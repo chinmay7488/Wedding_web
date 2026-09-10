@@ -1,6 +1,14 @@
 CHANGELOG — Neel & Hema Wedding Website
 ========================================
 
+[2026-09-10] — Event Media Assets
+----------------------------------
+
+ASSETS
+  - Added invitation video (assets/videos/invitation.mp4)
+  - Added ceremony artwork for Faal Daan, Haldi, Saath Phere, Varmala, Vidhan, and Baraat
+  - Added event photography for the Ring Ceremony, Sangeet, and Reception
+
 
 [2026-08-30] — Initial Build
 ------------------------------
