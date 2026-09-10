@@ -115,3 +115,82 @@ RESPONSIVE DESIGN
   - Families columns stack on ≤800px
   - Venue card stacks on ≤860px
   - Hero meta row stacks on ≤640px
+
+
+[2026-08-30] — UI Overhaul & Responsive Fixes (Commit 2)
+----------------------------------------------------------
+
+NAVIGATION
+  - Removed center monogram logo (N & H) from navbar entirely
+  - Switched #main-nav from CSS Grid to Flexbox — muhurat countdown left, nav links right
+  - Added margin-left: auto on .nav-right to always pin links to far right
+  - Removed all nav-logo-* CSS (nav-logo, nav-logo-star, nav-logo-names, nav-logo-amp, nav-logo-location)
+  - Fixed Home nav link: was pointing to #main-section → now correctly targets #hero-section
+  - Fixed Events nav link: was pointing to #timeline-section → now #events-section
+  - Added id="events-section" to the timeline section element
+  - Hamburger menu: switched mobile nav from grid-column placement to flexbox order properties
+  - Mobile nav: hamburger left (order:0), logo center (order:1, flex:1), drawer fixed positioned
+
+HERO SECTION
+  - Added hashtag pill between couple name and subtitle: ✦ #ChinmayKiKhushi ✦
+  - Video now fills full section height (height: 100%) — countdown bar covers it via z-index
+  - Countdown bar: added margin-top: -2px to eliminate sub-pixel brown gap between video and bar
+  - Removed --bar-height CSS variable system entirely (was unreliable across breakpoints)
+  - align-self: stretch + width: 100% on .hero-countdown-bar ensures full viewport width always
+  - hero-overlay switched from partial height to inset: 0 (full coverage, bar z-index handles masking)
+
+WEDDING EVENTS SECTION
+  - Added id="events-section" to section for correct anchor navigation
+  - All 8 event cards fully redesigned to match reference image style:
+    - Category badge (top-right of image): "Tradition", "Ceremony", "Ritual" etc.
+    - Italic gold subtitle line below event title
+    - Consistent 8px margin between title → subtitle → time → description
+    - Description uses flex:1 to fill space — attire bar always pinned to bottom
+    - Attire footer with top border: "ATTIRE: [value]" in small caps
+  - Event card layout: display:flex flex-direction:column for uniform height across row
+  - image-container: position:relative added for badge overlay
+  - event-title: dark near-black (#1a0a1e), font-size 1.3rem
+  - event-subtitle: italic gold (#c9960e), 0.78rem
+  - event-description: muted blue-grey (#5a5878), flex:1 to push attire to bottom
+  - Updated Day 1 cards: Tikka Faal Daan, Ring Ceremony, Haldi, Sangeet
+  - Updated Day 2 cards: Vidhan, Baarat, Varmala & Reception, Hast Melap
+  - Corrected event times for Day 2 (Baarat: 4:30PM, Varmala: 6:15PM, Hast Melap: 12:45PM)
+
+OUR FAMILIES SECTION
+  - Family column header redesigned to match reference:
+    - Removed pill badges (Groom's Side / Bride's Side)
+    - New .fam-col-header wrapper: centered large bold serif title + hometown line
+    - Title: "Groom's Family" / "Bride's Family" — clamp(1.6rem, 3vw, 2.2rem), weight 700
+    - Hometown: centered, pin icon + "Hometown: X · Current: Y" with gold dot separator
+    - Bottom border on header creates visual separator from content below
+  - Parents card photo completely restyled:
+    - Changed from 80×100px rectangle to 110×110px circle (border-radius: 50%)
+    - Gold ring border (3px solid) + outer glow shadow
+    - Real image support: replace div with <img class="fam-photo-placeholder">
+  - Profession rows now use <dl>/<dt>/<dd> with CSS Grid (auto 1fr) two-column layout:
+    - <dt>: person name, bold dark
+    - <dd>: profession description, warm gold-brown (#c9860e)
+    - Matches reference image exactly
+  - Location tag: switched icon from fa-location-dot to fa-house
+  - families-columns: switched from 1fr 1fr to repeat(2, minmax(0, 600px)) with gap 2.5rem
+  - families-wrap: max-width widened from 1100px to 1300px to accommodate 600px columns
+  - Co-located @media (max-width: 900px) rule next to base .families-columns so cascade works
+  - Mobile families: card stacks vertically, centred, detail rows collapse to single column
+
+VENUE SECTION
+  - Co-located @media (max-width: 900px) next to base .venue-card CSS
+  - venue-card now correctly stacks info above map at ≤900px (was broken due to cascade order)
+  - map panel: border-radius 0 0 16px 16px when stacked
+
+RESPONSIVE FIXES
+  - Added overflow-x: hidden to html element (was only on body) — fixes grey sidebar on mobile
+  - Fixed horizontal scroll / grey bars on mobile viewports
+  - 1024px breakpoint: hero heading reduced (clamp 5.5vw), countdown bar numbers reduced
+  - All section-specific @media blocks co-located with component base styles to fix cascade
+
+BUG FIXES
+  - Families two-column layout was not stacking at ≤900px due to base CSS defined after
+    @media blocks in file — fixed by co-locating breakpoint override after base rule
+  - Venue card same issue fixed with same approach
+  - Events section section had no id — nav link "Events" was broken anchor
+  - Nav "Home" pointed to non-existent #main-section — fixed to #hero-section
