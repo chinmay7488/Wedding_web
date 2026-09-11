@@ -1,6 +1,20 @@
 CHANGELOG — Neel & Hema Wedding Website
 ========================================
 
+[2026-09-11] — Purple Palette & Family Photo Update
+---------------------------------------------------
+
+DESIGN
+  - Added cream, ivory, and purple CSS custom properties for the wedding palette
+  - Restyled the navigation, hero buttons, and countdown areas with the purple/ivory palette
+  - Updated the family-section layout and parent cards for a wider, more prominent presentation
+
+CONTENT & ASSETS
+  - Updated the browser title to "Chinmay & Khushi | Wedding"
+  - Added the groom's parents photo asset (assets/images/mummy_papa.jpeg)
+  - Displayed the groom's parents photo in the Families section
+
+
 [2026-09-10] — Event Media Assets
 ----------------------------------
 

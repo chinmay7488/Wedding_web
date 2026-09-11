@@ -21,6 +21,14 @@
    1. CSS CUSTOM PROPERTIES (Design Tokens)
 ----------------------------------------------- */
 :root {
+  /* Wedding palette */
+  --color-cream:         #FFFDD0;
+  --color-ivory:         #fffff0;
+  --color-purple-dark:   #996fd6;
+  --color-purple-medium: #a786db;
+  --color-purple-light:  #b59ce0;
+  --color-purple-lightest:  #C2B3E5;
+
   /* Brand colours */
   --color-primary:        #8b5e52;   /* warm terracotta — headings, accents   */
   --color-primary-dark:   #6e4940;   /* hover states                          */
@@ -258,7 +266,8 @@ p { margin-bottom: 0; }
 }
 
 #site-header.scrolled {
-  background-color: #1e0d0d;
+  background-color: var(--color-purple-dark);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23b59ce0' fill-opacity='0.19' fill-rule='evenodd'/%3E%3C/svg%3E");
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -286,7 +295,7 @@ p { margin-bottom: 0; }
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-ivory);
   opacity: 0.85;
 }
 
@@ -300,8 +309,8 @@ p { margin-bottom: 0; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(201, 169, 110, 0.25);
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-gold-light);
   border-radius: 4px;
   padding: 3px 7px;
   min-width: 34px;
@@ -311,7 +320,7 @@ p { margin-bottom: 0; }
   font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 400;
-  color: #f5ede3;
+  color: var(--color-purple-dark);
   line-height: 1.1;
 }
 
@@ -320,7 +329,7 @@ p { margin-bottom: 0; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(201, 169, 110, 0.7);
+  color: var(--color-purple-medium);
   margin-top: 1px;
 }
 
@@ -354,7 +363,7 @@ p { margin-bottom: 0; }
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(245, 237, 227, 0.75);
+  color: var(--color-ivory);
   transition: color var(--transition);
   position: relative;
   white-space: nowrap;
@@ -378,28 +387,6 @@ p { margin-bottom: 0; }
 .nav-link:hover::after,
 .nav-link:focus-visible::after {
   width: 100%;
-}
-
-/* RSVP pill button */
-.nav-rsvp-btn {
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  background-color: transparent;
-  border: 1.5px solid var(--color-gold);
-  border-radius: 30px;
-  padding: 0.45rem 1.3rem;
-  white-space: nowrap;
-  transition: background-color var(--transition), color var(--transition);
-}
-
-.nav-rsvp-btn:hover,
-.nav-rsvp-btn:focus-visible {
-  background-color: var(--color-gold);
-  color: #1e0d0d;
 }
 
 /* Hamburger button — hidden on desktop */
@@ -567,9 +554,9 @@ p { margin-bottom: 0; }
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-gold);
-  background-color: rgba(201, 169, 110, 0.12);
-  border: 1px solid rgba(201, 169, 110, 0.4);
+  color: var(--color-purple-lightest);
+  background-color: color-mix(in srgb, var(--color-purple-lightest) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-gold-light) 0.4%, transparent);
   border-radius: 20px;
   padding: 0.35rem 1.1rem;
   margin-bottom: 1.25rem;
@@ -657,25 +644,25 @@ p { margin-bottom: 0; }
 
 /* Dark wine button */
 .hero-btn-dark {
-  background-color: #3a0f0f;
-  color: #f5ede3;
-  border: 1px solid rgba(201,169,110,0.3);
+  background-color: var(--color-purple-medium);
+  color: var(--color-ivory);
+  border: color-mix(in srgb, var(--primary-gold) 0.3%, transparent);
 }
 
 .hero-btn-dark:hover {
-  background-color: #4e1515;
+  background-color: var(--color-purple-dark);
 }
 
 /* Gold button */
 .hero-btn-gold {
-  background-color: var(--color-gold);
-  color: #1e0d0d;
-  border: 1px solid var(--color-gold);
+  background-color: var(--color-ivory);
+  color: var(--color-purple-medium);
+  border: 1px solid var(--color-ivory);
 }
 
 .hero-btn-gold:hover {
-  background-color: #b8935a;
-  border-color: #b8935a;
+  background-color: var(--color-cream);
+  border-color: var(--color-cream);
 }
 
 /* ── Bottom countdown bar — solid dark, no video behind it ── */
@@ -683,10 +670,12 @@ p { margin-bottom: 0; }
   position: relative;
   z-index: 3;
   /* Fully opaque — covers video completely, no gap possible */
-  background-color: #140808;
+   background-color: var(--color-purple-dark);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23b59ce0' fill-opacity='0.19' fill-rule='evenodd'/%3E%3C/svg%3E");
+  
   /* Negative margin pulls it up 2px to overlap any sub-pixel gap */
   margin-top: -2px;
-  border-top: 1px solid rgba(201, 169, 110, 0.2);
+  border-top: 1px solid var(--color-purple-dark);
   flex-shrink: 0;
   align-self: stretch;
   width: 100%;
@@ -711,18 +700,18 @@ p { margin-bottom: 0; }
 
 .hcb-title {
   font-family: var(--font-body);
-  font-size: 0.62rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-ivory);
 }
 
 .hcb-subtitle {
-  font-size: 0.62rem;
+  font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(201, 169, 110, 0.45);
+  color: var(--color-purple-lightest);
 }
 
 /* Timer units */
@@ -743,7 +732,7 @@ p { margin-bottom: 0; }
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 300;
-  color: #f5ede3;
+  color: var(--color-ivory);
   line-height: 1;
 }
 
@@ -752,7 +741,7 @@ p { margin-bottom: 0; }
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(201, 169, 110, 0.6);
+  color: var(--color-purple-lightest);
 }
 
 .hcb-sep {
@@ -1751,6 +1740,7 @@ p { margin-bottom: 0; }
 
 .families-wrap {
   margin-inline: auto;
+  max-width: 1540px;
 }
 
 /* ── Header ── */
@@ -1809,9 +1799,8 @@ p { margin-bottom: 0; }
 /* ── Two column grid ── */
 .families-columns {
   display: grid;
-  /* Each column starts at 600px, shrinks to 300px before wrapping */
-  grid-template-columns: repeat(2, minmax(0, 600px));
-  gap: 10rem;           /* generous gap between groom & bride sides */
+  grid-template-columns: repeat(2, minmax(0, 740px));
+  gap: clamp(2rem, 4vw, 4rem);
   align-items: start;
   width: 100%;
   justify-content: center;
@@ -1881,10 +1870,13 @@ p { margin-bottom: 0; }
   background-color: #fdfaf5;
   border: 1px solid #e8d8c0;
   border-radius: 14px;
-  padding: 1.2rem;
+  padding: 1.8rem;
   display: flex;
-  gap: 1.2rem;
-  align-items: flex-start;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  min-height: 320px;
+  box-shadow: 0 3px 12px rgba(77, 45, 31, 0.05);
 }
 
 /* ── Circle photo with gold ring ── */
@@ -1894,8 +1886,8 @@ p { margin-bottom: 0; }
 }
 
 .fam-photo-placeholder {
-  width: 110px;
-  height: 110px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;                 /* circular like reference */
   background: linear-gradient(135deg, #e8d5b0, #c9a96e);
   border: 3px solid var(--color-gold);
@@ -1947,13 +1939,12 @@ p { margin-bottom: 0; }
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding-top: 0.1rem;
+  gap: 0.7rem;
 }
 
 /* Gold caps eyebrow */
 .fam-card-eyebrow {
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1963,7 +1954,7 @@ p { margin-bottom: 0; }
 /* Bold name */
 .fam-card-name {
   font-family: var(--font-heading);
-  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-size: clamp(1.55rem, 2.8vw, 2.2rem);
   font-weight: 700;
   color: #2a0e1e;
   line-height: 1.25;
@@ -1974,7 +1965,7 @@ p { margin-bottom: 0; }
 .fam-card-details {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.65rem;
   margin: 0;
   padding: 0;
 }
@@ -1982,20 +1973,20 @@ p { margin-bottom: 0; }
 .fam-detail-row {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 0.5rem;
+  gap: 0.8rem;
   align-items: baseline;
 }
 
 .fam-detail-row dt {
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #2a0e1e;
   white-space: nowrap;
 }
 
 .fam-detail-row dd {
-  font-size: 0.78rem;
-  color: #c9860e;               /* warm gold-brown like the reference */
+  font-size: 0.95rem;
+  color: #6f625d;
   line-height: 1.45;
   margin: 0;
 }
@@ -2005,13 +1996,13 @@ p { margin-bottom: 0; }
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
-  font-size: 0.72rem;
+  font-size: 0.86rem;
   font-weight: 600;
   color: #5a4030;
   background-color: #fdf0e0;
   border: 1px solid #e8c898;
   border-radius: 10px;
-  padding: 0.25rem 0.75rem;
+  padding: 0.4rem 0.85rem;
   width: fit-content;
 }
 
@@ -2360,7 +2351,7 @@ p { margin-bottom: 0; }
 
   /* Families */
   .families-wrap {
-    max-width: 1300px;
+    max-width: 1540px;
   }
 
   .fam-col {
