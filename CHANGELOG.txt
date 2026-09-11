@@ -14,6 +14,12 @@ CONTENT & ASSETS
   - Added the groom's parents photo asset (assets/images/mummy_papa.jpeg)
   - Displayed the groom's parents photo in the Families section
 
+NAVIGATION & SECTION BACKGROUNDS
+  - Added a frosted-glass treatment to the Muhurat countdown while the navbar overlays the hero
+  - Changed the navbar and countdown cards to their solid purple/cream styles only after the full hero section has been scrolled past
+  - Added a shared ivory temple-pattern background for content sections, excluding the hero, header, and footer
+  - Added --color-bg-sections and --image-bg-sections CSS variables so the shared section background can be changed in one place
+
 
 [2026-09-10] — Event Media Assets
 ----------------------------------

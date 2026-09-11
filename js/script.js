@@ -44,10 +44,10 @@ function initStickyNav() {
   const SCROLL_THRESHOLD = 60;
 
   function updateHeaderState() {
-    // Use the hero section's height as the threshold so the nav
-    // becomes visible exactly when the user scrolls past the hero
+    // Keep the navbar transparent while it overlays the hero.  Apply its
+    // solid background only after the hero has been fully scrolled past.
     const hero = document.getElementById('hero-section');
-    const threshold = hero ? hero.offsetHeight - 80 : SCROLL_THRESHOLD;
+    const threshold = hero ? hero.offsetHeight : SCROLL_THRESHOLD;
 
     if (window.scrollY > threshold) {
       header.classList.add('scrolled');
